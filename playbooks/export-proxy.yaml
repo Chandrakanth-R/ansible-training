@@ -1,0 +1,7 @@
+---
+- name: Sets proxy to linux machines
+  hosts: linux
+  tasks: 
+  - name: Copying the file
+    copy: dest=/etc/profile.d/hp-proxy.sh src=/etc/profile.d/hp-proxy.sh
+...

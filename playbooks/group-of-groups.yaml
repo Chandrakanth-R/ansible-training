@@ -1,0 +1,6 @@
+---
+- name: This creates and copies a file
+  hosts: all 
+  tasks:
+  - ping: 
+...

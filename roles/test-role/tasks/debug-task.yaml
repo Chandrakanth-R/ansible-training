@@ -1,0 +1,4 @@
+---
+  - name: Test debug
+    debug: msg="I am debugging the roles"
+...

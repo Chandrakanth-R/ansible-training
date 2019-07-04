@@ -1,0 +1,11 @@
+---
+- name: Working with variables
+  hosts: ars1
+  tasks:
+  - include_vars: 
+  
+- debug:
+      msg: You have typed {{ my_name }}
+  - debug:
+      msg: What you typed is {{ anything }}
+...

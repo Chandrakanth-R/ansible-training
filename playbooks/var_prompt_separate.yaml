@@ -1,0 +1,23 @@
+---
+- name: 1st Play
+  hosts: ars1
+  vars_prompt:
+  - name: my_name
+    private: no
+    prompt: What is your name?
+
+  tasks: 
+  - debug:
+      msg: You have typed {{ my_name }}
+
+- name: 2nd Play
+  hosts: ars1
+  vars_prompt:
+  - name: anything
+    private: no
+    prompt: Anything else you want to ?
+
+  tasks:
+  - debug:
+      msg: What you typed is {{ anything }}
+...

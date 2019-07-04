@@ -1,0 +1,17 @@
+---
+- name: Working with variables
+  hosts: ars1
+  vars_prompt:
+  - name: my_name
+    private: no
+    prompt: What is your name?
+  - name: anything
+    private: no
+    prompt: Anything else you want to ?
+
+  tasks: 
+  - debug:
+      msg: You have typed {{ my_name }}
+  - debug:
+      msg: What you typed is {{ anything }}
+...

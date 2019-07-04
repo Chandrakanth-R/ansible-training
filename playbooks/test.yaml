@@ -1,0 +1,9 @@
+---
+- name: This creates and copies a file
+  hosts: all
+  tasks: 
+  - name: Creating file
+    copy: dest=/tmp/index.html content='Welcome to HP Ansible class'
+  - name: Copying file
+    copy: dest=/opt/index-copied.html src=/tmp/index.html remote_src=yes
+...

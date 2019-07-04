@@ -1,0 +1,21 @@
+#Group of groups
+[linux:children]
+ars1
+ars2
+
+[ars1]
+10.76.85.101 my_variable=dummy-value
+
+[ars2]
+10.76.87.8
+
+[windows]
+ec2-13-233-119-65.ap-south-1.compute.amazonaws.com ansible_user=Administrator ansible_password=WsgPP?V%&JWvp.AwfKcacQp@22I!8QF! ansible_connection=winrm ansible_winrm_transport=basic ansible_winrm_server_cert_validation=ignore
+
+#Groups with variable values
+[ars1:vars]
+my_var=host group value
+
+#The group all cannot be overridden
+[all]
+10.76.87.8

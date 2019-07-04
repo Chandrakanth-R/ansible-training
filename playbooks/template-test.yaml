@@ -1,0 +1,7 @@
+---
+- name: Template Test
+  hosts: linux
+  tasks:
+  - name: "Task 1 : Copying the file"
+    template: dest=/tmp/template-test-notj2.tcl src=../templates/test.keep
+...

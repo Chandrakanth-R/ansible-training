@@ -1,0 +1,13 @@
+---
+- name: This creates and copies a file
+  hosts: windows
+  tasks: 
+  - name: Creating file in linux
+    copy: dest=/tmp/index.html content='I am Redhat'
+    when: ansible_os_family == "RedHat"
+
+  - name: Creating file in windows
+    win_copy: dest=c:\hp\ck\index-1.html content='I am Windows'
+    when: ansible_os_family == "Windows"
+
+...

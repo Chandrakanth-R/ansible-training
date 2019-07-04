@@ -1,0 +1,11 @@
+---
+- name: Working with variables
+  hosts: ars1
+  vars_files:
+  - "../vars/var_file.yaml"
+  tasks: 
+  - debug:
+      msg: My message is {{ my_var }}
+  - debug:
+      msg: Variable 1 is {{ variable1 }}
+...
